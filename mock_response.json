@@ -1,0 +1,213 @@
+{
+    "metadata": {
+        "sample_date": "2023/09/17",
+        "firstname": "Jean",
+        "lastname": "Dupont",
+        "nss": "1238475324876",
+        "dob": "1992/10/23",
+        "patient_id": "0000812363",
+        "laboratory_group": "LABOGROUP",
+        "laboratory": "LBM LABORATOIRE DUTUBE",
+        "locale": "fr",
+        "evaluated_on": "2024/03/16",
+        "urgent": false,
+        "anormal": false
+    },
+    "transcript": [
+        {
+            "label_labo": "Hémoglobine",
+            "label": "Hémoglobine",
+            "code_labo": "NF2",
+            "code_deepia": "HB",
+            "displayed": true,
+            "computed": false,
+            "normal": false,
+            "order": 0,
+            "main_line": true,
+            "commentary": null,
+            "code_loinc": "718-7",
+            "value": "10.3",
+            "unit": "g/dL",
+            "lower_bound": "12.9",
+            "upper_bound": "16.7",
+            "tube": "EDTA",
+            "category": "Numération"
+        },
+        {
+            "label_labo": "V.G.M.",
+            "label": "V.G.M.",
+            "code_labo": "NF4",
+            "code_deepia": "VGM",
+            "displayed": true,
+            "computed": false,
+            "normal": true,
+            "order": 1,
+            "main_line": 1,
+            "commentary": null,
+            "loinc": "787-2",
+            "value": "88",
+            "unit": "fL",
+            "lower_bound": "83",
+            "upper_bound": "97",
+            "tube": "EDTA",
+            "category": "Numération"
+        }
+    ],
+    "clinical_data": [
+        {
+            "label": "âge",
+            "code_deepia": "AGE",
+            "value": 73,
+            "commentary": null,
+            "type": "int"
+        },
+        {
+            "label": "sexe",
+            "code_deepia": "SEXE",
+            "value": "M",
+            "type": "str"
+        }
+    ],
+    "questions": [
+        {
+            "label": "Prise d'un traitement anti-thyroïdien?",
+            "code_deepia": "q_traitement_thyroïde",
+            "type": "yesno",
+            "options": null,
+            "default": false,
+            "commentary": null
+        }
+    ],
+    "anomalies": [
+        {
+            "label": "Anémie macrocytaire",
+            "code": "anemie_macrocytaire",
+            "linked_measure_codes": [
+                "HB",
+                "VGM"
+            ],
+            "documentations": [
+                {
+                    "code": "anemie_macrocytaire",
+                    "title": "Principales causes d'anémie macrocytaire",
+                    "body": "IyBQcmluY2lwYWxlcyBjYXVzZXMgZCdhbsOpbWllIG1hY3JvY3l0YWlyZQoKRW4gY2FzIGQnYW7DqW1pZSByw6lnw6luw6lyYXRpdmU6CgotIEFuw6ltaWUgaMOpbW9seXRpcXVlCi0gQW7DqW1pZSBwYXIgaMOpbW9ycmFnaWUgYWlndcOrCgpFbiBjYXMgZCdhbsOpbWllIGFyw6lnw6luw6lyYXRpdmU6CgotIENhcmVuY2UgQjEyIAotIENhcmVuY2UgZm9sYXRlcwotIEh5cG90aHlyb8OvZGllCi0gSMOpcGF0b3BhdGhpZSBjaHJvbmlxdWUKLSBEeXNteWVsb3BvacOoc2U="
+                }
+            ],
+            "urgent": false,
+            "explorations": [
+                {
+                    "ordo_title": "Recommandations générales",
+                    "ordo_type": "bilan_sanguin",
+                    "delay": null,
+                    "exams": [
+                        {
+                            "label": "Réticulocytes",
+                            "loinc": "17849-1",
+                            "code_deepia": "RTC",
+                            "commentary": "Déterminer si l'anémie est régénérative.",
+                            "sources": [
+                                "anemie_medg"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "ordo_title": "Carences vitaminiques",
+                    "ordo_type": "bilan_sanguin",
+                    "delay": null,
+                    "exams": [
+                        {
+                            "label": "Vitamine B12",
+                            "loinc": "17849-1",
+                            "code_deepia": "B12",
+                            "commentary": "",
+                            "sources": [
+                                ""
+                            ]
+                        },
+                        {
+                            "label": "Vitamine B9",
+                            "loinc": "17849-1",
+                            "code_deepia": "B9",
+                            "commentary": "",
+                            "sources": [
+                                ""
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "ordo_title": "Anémie hémolytique",
+                    "ordo_type": "bilan_sanguin",
+                    "delay": null,
+                    "exams": [
+                        {
+                            "label": "Haptoglobine",
+                            "loinc": "17849-1",
+                            "code_deepia": "HPT",
+                            "commentary": "",
+                            "sources": [
+                                ""
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "ordo_title": "Hypothyroïdie",
+                    "ordo_type": "bilan_sanguin",
+                    "delay": null,
+                    "exams": [
+                        {
+                            "label": "TSH",
+                            "loinc": "17849-1",
+                            "code_deepia": "TSH",
+                            "commentary": "",
+                            "sources": [
+                                ""
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "ordo_title": "Hépatopathie chronique",
+                    "ordo_type": "bilan_sanguin",
+                    "delay": null,
+                    "exams": [
+                        {
+                            "label": "Bilan hépatique (ASAT, ALAT, GGT, Bilirubine, PAL)",
+                            "loinc": "17849-1",
+                            "code_deepia": "BHC",
+                            "commentary": "",
+                            "sources": [
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "sources": [
+                {
+                    "code": "anemie_has_carence_fer",
+                    "label": "HAS : Suspicion de carence en fer : quels examens prescrire?",
+                    "source": "HAS",
+                    "date": "2011",
+                    "link": "https://www.has-sante.fr/jcms/c_1062859/fr/suspicion-de-carence-en-fer-quels-examens-prescrire"
+                },
+                {
+                    "code": "anemie_has_hemolytique",
+                    "label": "PNDS : Anémie Hémolytique Auto-Immune",
+                    "source": "HAS",
+                    "date": "2017",
+                    "link": "https://www.has-sante.fr/jcms/c_2747976/fr/anemie-hemolytique-auto-immune-de-l-enfant-et-de-l-adulte"
+                },
+                {
+                    "code": "anemie_has_crc",
+                    "label": "HAS : Cancer colorectal : modalités de dépistage et de prévention chez les sujets à risque élevé et très élevé",
+                    "source": "HAS",
+                    "date": "2017",
+                    "link": "https://www.has-sante.fr/jcms/c_2772744/fr/cancer-colorectal-modalites-de-depistage-et-de-prevention-chez-les-sujets-a-risque-eleve-et-tres-eleve"
+                }
+            ]
+        }
+    ]
+}

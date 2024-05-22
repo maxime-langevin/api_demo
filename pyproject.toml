@@ -1,0 +1,54 @@
+[tool.poetry]
+name = "pdf2hprim"
+version = "0.0.1"
+description = "toolkit to extract data from pdf biology transcripts"
+authors = ["Dan Ringwald <dan@deepia.fr>"]
+readme = "README.md"
+packages = [{include = "pdf2hprim"}]
+
+[tool.poetry.dependencies]
+python = "~3.10"
+pytesseract = "^0.3.10"
+pyyaml = "^6.0.1"
+pandas = "^2.1.3"
+pdf2image = "^1.16.3"
+opencv-python = "^4.8.1.78"
+unidecode = "^1.3.7"
+pymupdf = "^1.23.7"
+pypdf2 = "^3.0.1"
+futures3 = "^1.0.0"
+pyarrow = "^15.0.0"
+pdfplumber = "^0.10.4"
+faker = "^24.0.0"
+streamlit-authenticator = "^0.3.1"
+
+[tool.poetry.group.dev.dependencies]
+black = "^22.12.0"
+pytest = "^7.2.1"
+ruff = "^0.0.275"
+isort = "^5.12.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 100
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+)/
+'''
+
+[tool.ruff]
+line-length = 100
+ignore = ["E722"]
